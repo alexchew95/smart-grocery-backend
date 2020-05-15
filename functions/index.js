@@ -6,12 +6,14 @@ const functions = require('firebase-functions');
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 const admin = require('firebase-admin');
 var serviceAccount = require("C:/wamp64/www/smart-grocery-backend/smart-grocery-f41a7-f063163a47f7.json");
+//for localhost
 admin.initializeApp(
   {
     credential: admin.credential.cert(serviceAccount),
     databaseURL: "https://smart-grocery-f41a7.firebaseio.com"
   }
 ); 
+//for firebase functions
 //admin.initializeApp();
 var db = admin.database();
 
